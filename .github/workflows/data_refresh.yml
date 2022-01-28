@@ -1,0 +1,18 @@
+name: Data Refresh
+
+on: [push]
+  #schedule:
+  #  - cron:  '0 */8 * * *'
+jobs:
+  data_refresh_dev:
+    name: Pyladies data refresh 
+    runs-on: ubuntu-18.04
+    container:
+     image: docker.io/rkrispin/pyladies:v4.1.0
+    steps:
+      - name: checkout_repo
+        uses: actions/checkout@v2
+        with:
+          ref: 'master'
+      - name: Refresh the data
+        run: R -e "print('hello world')"
