@@ -1,5 +1,5 @@
 #!/bin/bash
-set -o errexit -o nounset
+#set -o errexit -o nounset
 #BASE_REPO=$PWD
 
 setup_git() {
@@ -37,6 +37,6 @@ upload_files() {
 
 setup_git
 
-commit_files
+#commit_files
 
-upload_files
+#upload_files
