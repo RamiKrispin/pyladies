@@ -99,3 +99,5 @@
     # Install dependencies 
     RUN R -e "install.packages(c('littler', 'remotes', 'curl', 'jsonlite'), repo = 'http://cran.rstudio.com')" \
     && R -e "remotes::install_github('rladies/meetupr')"
+
+    ENTRYPOINT ["tail", "-f", "/dev/null"]
